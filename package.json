@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "build": "./build-app.sh",
-    "serve": "./serve-app.sh",
-    "deploy": "./deploy-app.sh"
+    "build": "./scripts/build-app.sh",
+    "watch": "./scripts/watch-app.sh",
+    "serve": "./scripts/serve-app.sh",
+    "deploy": "./scripts/deploy-app.sh"
   },
   "repository": {
     "type": "git",
@@ -20,13 +21,17 @@
   },
   "homepage": "https://github.com/pvdheijden/tiles-demo#readme",
   "dependencies": {
+    "aws-sdk": "^2.2.26",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
-    "browserify": "*",
+    "bower": "^1.7.1",
+    "browserify": "^12.0.1",
     "local-web-server": "^1.1.0",
     "minifyify": "^7.1.0",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "s3-image-sources": "git+https://github.com/pvdheijden/s3-image-sources.git",
+    "watchify": "^3.6.1"
   }
 }
