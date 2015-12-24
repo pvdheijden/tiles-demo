@@ -30,6 +30,5 @@ node_modules
 bower_components
 
 *.min.js
-/image-sources/image-sources.zip
 /www/lib
 *.map.*

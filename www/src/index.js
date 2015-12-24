@@ -22,9 +22,13 @@ var Tile = React.createClass({
 var Picture = React.createClass({
     displayName: 'Picture',
 
+    handleOmouseOut: function(event) {
+        this.props.setSelectedSrc(null);
+    },
+
     render: function() {
         return (
-            <div className="Picture">
+            <div className="picture" onMouseOut={this.handleOmouseOut}>
                 <img src={this.props.src} />
             </div>
         )
@@ -66,7 +70,7 @@ var TileList = React.createClass({
 
         return this.state.selectedSrc ? (
             <div>
-                <Picture src={this.state.selectedSrc}/>
+                <Picture src={this.state.selectedSrc} setSelectedSrc={this.setSelectedSrc}/>
                 <div className="tile-list">
                     {tileList}
                 </div>
